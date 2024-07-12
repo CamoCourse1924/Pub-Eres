@@ -64,13 +64,13 @@ Devvit.addCustomPostType({
 });
 Devvit.addMenuItem({
   location: 'subreddit',
-  label: 'create a custome post ',
+  label: 'create a custom post ',
   onPress: async (_, context) => {
     const { reddit, ui } = context;
     const currentSubreddit = await reddit.getCurrentSubreddit();
     context.ui.showForm(Submissionform);
     await reddit.submitPost({  
-      title: 'Post Sumbission',  
+      title: 'Post Submission',  
       subredditName: currentSubreddit.name,  
       preview: (  
         <vstack>  
